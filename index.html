@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body class="bg-[url('/images/ghibli_test.jpg')] bg-cover bg-center min-h-screen text-gray-900 dark:bg-gray-950 dark:text-gray-100 min-h-screen transition-colors duration-300">
+<body class="bg-[url('/images/ghibli_test.jpg')] bg-cover bg-center bg-no-repeat min-h-screen text-gray-900 dark:bg-gray-950 dark:text-gray-100 min-h-screen transition-colors duration-300">
 
 
 
@@ -41,19 +41,52 @@
 
   <!------------------------------------------- HEADER --------------------------------->
   <header class="p-[60px] flex justify-between items-center font-dela font-normal">
-    <div id="title-div">
-      <h1 class="text-4xl">
+
+    <div id="title-div" class="cursor-default">
+      <!-- Desktop / Medium+ screens -->
+      <h1 class="text-4xl hidden md:block">
         ghiblidoro
       </h1>
-      <h3 class="mt-[3px] pl-[163px]">
+      <h3 class="mt-[3px] pl-[163px] hidden md:block">
         <span class="text-xs">by</span>
         <span class="text-m">DJ</span>
       </h3>
+      <div class="block md:hidden h-[67px]"></div>
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto px-6 py-20">
+  <main class="max-w-[300px] h-[250px] mx-auto mt-[80px] mb-20 flex flex-col">
+    <!-- Top section (1) -->
+    <div class="[flex-grow:1] flex justify-evenly items-center">
+      <button class="bg-indigo-900 text-white px-4 py-2 rounded">
+        Work
+      </button>
+      <button class="bg-emerald-900 text-white px-4 py-2 rounded">
+        Watch
+      </button>
+    </div>
+
+    <!-- Middle section (2) -->
+    <div class="[flex-grow:2] flex justify-center items-center">
+      TIMER
+    </div>
+
+    <!-- Bottom section (1) -->
+    <div class="[flex-grow:1] flex justify-evenly items-center">
+      <button class="bg-indigo-900 text-white px-4 py-2 rounded">
+        Start
+      </button>
+      <button class="bg-pink-900 text-white px-4 py-2 rounded">
+        Reset
+      </button>
+      <button class="bg-emerald-900 text-white px-4 py-2 rounded">
+        Options
+      </button>
+    </div>
   </main>
+
+
+
 
   <!-- Correct JS path -->
   <script src="./js/script.js"></script>
