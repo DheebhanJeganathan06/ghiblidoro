@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ghiblidoro</title>
 
-  <!-- Tailwind config -->
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config (MUST come after CDN) -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -14,29 +17,45 @@
           colors: {
             accent: '#8b5cf6',
           },
+          fontFamily: {
+            dela: ["Dela", "cursive"]
+          },
         },
       },
     }
   </script>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Custom CSS (fonts) -->
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 min-h-screen transition-colors duration-300">
+<body class="bg-[url('/images/ghibli_test.jpg')] bg-cover bg-center min-h-screen text-gray-900 dark:bg-gray-950 dark:text-gray-100 min-h-screen transition-colors duration-300">
 
-  <header class="p-6 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">
-      ghiblidoro
-    </h1>
+
+
+
+
+
+
+
+
+  <!------------------------------------------- HEADER --------------------------------->
+  <header class="p-[60px] flex justify-between items-center font-dela font-normal">
+    <div id="title-div">
+      <h1 class="text-4xl">
+        ghiblidoro
+      </h1>
+      <h3 class="mt-[3px] pl-[163px]">
+        <span class="text-xs">by</span>
+        <span class="text-m">DJ</span>
+      </h3>
+    </div>
   </header>
 
   <main class="max-w-3xl mx-auto px-6 py-20">
   </main>
 
-  <script src="script.js"></script>
+  <!-- Correct JS path -->
+  <script src="./js/script.js"></script>
 </body>
 </html>
