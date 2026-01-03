@@ -11,7 +11,6 @@
   <!-- Tailwind config (MUST come after CDN) -->
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -40,8 +39,7 @@
 
 
   <!------------------------------------------- HEADER --------------------------------->
-  <header class="p-[60px] flex justify-between items-center font-dela font-normal">
-
+  <header class="p-[30px] flex justify-between items-center font-dela font-normal">
     <div id="title-div" class="cursor-default">
       <!-- Desktop / Medium+ screens -->
       <h1 class="text-4xl hidden md:block">
@@ -53,35 +51,51 @@
       </h3>
       <div class="block md:hidden h-[67px]"></div>
     </div>
+    <div class="flex justify-between items-center">
+      <div class="p-6 mr-6">
+        <button id="reset-btn">
+          <img class="w-[80px] h-[80px]" src="/images/reset.png" alt="Reset">
+        </button>
+      </div>
+      <div class="p-6">
+        <button id="options-btn">
+          <img class="w-[80px] h-[80px]" src="/images/more.png" alt="Options">
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main class="max-w-[300px] h-[250px] mx-auto mt-[80px] mb-20 flex flex-col">
+  <main class="max-w-[900px] items-center h-[250px] mx-auto mt-[50px] mb-20 flex flex-col">
     <!-- Top section (1) -->
-    <div class="[flex-grow:1] flex justify-evenly items-center">
-      <button class="bg-indigo-900 text-white px-4 py-2 rounded">
+    <div class="max-w-[300px] flex-grow flex justify-evenly items-center">
+      <button
+        id="work-btn"
+        class="mode-btn font-dela selected font-dela px-6 py-2 rounded-full border-2 transition-colors duration-300"
+      >
         Work
       </button>
-      <button class="bg-emerald-900 text-white px-4 py-2 rounded">
-        Watch
+
+      <button
+        id="break-btn"
+        class="mode-btn font-dela px-6 py-2 rounded-full border-2 transition-colors duration-300"
+      >
+        Break
       </button>
     </div>
 
     <!-- Middle section (2) -->
-    <div class="[flex-grow:2] flex justify-center items-center">
-      TIMER
+    <div class="max-w-[300px] [flex-grow:2] my-[20px] flex justify-center items-center font-dela text-7xl">
+      <span id="timer-txt">25:00</span>
     </div>
 
     <!-- Bottom section (1) -->
-    <div class="[flex-grow:1] flex justify-evenly items-center">
-      <button class="bg-indigo-900 text-white px-4 py-2 rounded">
-        Start
-      </button>
-      <button class="bg-pink-900 text-white px-4 py-2 rounded">
-        Reset
-      </button>
-      <button class="bg-emerald-900 text-white px-4 py-2 rounded">
-        Options
-      </button>
+    <div class="max-w-[300px] [flex-grow:1] flex justify-evenly items-center">
+        <button id="start-btn" class="text-white font-dela px-8 py-3 rounded bg-black hover:bg-white transition-colors duration-300 hover:text-black rounded-full">Start</button>
+    </div>
+
+      <!-- Quote -->
+    <div id="quote-txt" class="px-6 py-4 mt-5 font-dela text-m">
+      "What is this diddy blud doin on the calculator, is blud Einstein" - Sun Tzu, the Art of War
     </div>
   </main>
 
